@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R01-Cn-ogS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="sGY-0Z-TKh">
+            <objects>
+                <viewController id="R01-Cn-ogS" customClass="CardViewController" customModule="DeckOfOneCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IZa-P0-4L8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CWn-rm-K3R">
+                                <rect key="frame" x="60" y="193" width="294" height="469"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="469" id="7ET-6l-olk"/>
+                                    <constraint firstAttribute="width" constant="294" id="mOA-yj-FMO"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hit the Draw Button" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHK-MB-Szu">
+                                <rect key="frame" x="106" y="144" width="202" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBG-0w-U8N">
+                                <rect key="frame" x="169" y="686" width="76" height="41"/>
+                                <color key="backgroundColor" red="0.0" green="0.23711690077040165" blue="0.57548778553299496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="  Draw  ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="drawCardButtonTapped:" destination="R01-Cn-ogS" eventType="touchUpInside" id="b7G-77-rRI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dAx-36-yHn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YBG-0w-U8N" firstAttribute="centerX" secondItem="dAx-36-yHn" secondAttribute="centerX" id="3xG-py-5mn"/>
+                            <constraint firstItem="BHK-MB-Szu" firstAttribute="top" secondItem="dAx-36-yHn" secondAttribute="top" constant="100" id="Bk1-Yt-9nV"/>
+                            <constraint firstItem="CWn-rm-K3R" firstAttribute="centerX" secondItem="dAx-36-yHn" secondAttribute="centerX" id="PBX-yw-qOX"/>
+                            <constraint firstItem="CWn-rm-K3R" firstAttribute="top" secondItem="BHK-MB-Szu" secondAttribute="bottom" constant="20" id="RCE-1T-9RP"/>
+                            <constraint firstItem="YBG-0w-U8N" firstAttribute="top" secondItem="CWn-rm-K3R" secondAttribute="bottom" constant="24" id="hWF-W5-ljn"/>
+                            <constraint firstItem="BHK-MB-Szu" firstAttribute="centerX" secondItem="dAx-36-yHn" secondAttribute="centerX" id="t4b-cw-Smw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardDrawButton" destination="YBG-0w-U8N" id="6fp-ep-Njg"/>
+                        <outlet property="cardImageView" destination="CWn-rm-K3R" id="TZy-AK-E6t"/>
+                        <outlet property="cardNameLabel" destination="BHK-MB-Szu" id="i0M-Zg-YEf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZKM-Hs-mUX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="353.62318840579712" y="-305.35714285714283"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
